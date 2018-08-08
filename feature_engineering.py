@@ -100,7 +100,7 @@ def feature_engineering3(sub,air_visit):
     return(stores)
 
 ## 4. merge with holiday data
-def feature_engineering4(holiday,air_visit,sub,stores,reserve):
+def feature_engineering4(holiday,air_visit,sub,reserve,stores):
     lbl = preprocessing.LabelEncoder()
     holiday['visit_date'] = pd.to_datetime(holiday['visit_date'])
     holiday['day_of_week'] = lbl.fit_transform(holiday['day_of_week'])
